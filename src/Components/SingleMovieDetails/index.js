@@ -6,7 +6,7 @@ const SingleMovieDetailedPage = () => {
     const fetchPopularMovies = async () => {
       try {
         const response = await fetch(
-          "https://api.themoviedb.org/3/movie/${movie_id}/credits?api_key=${Api_key}&language=en-US"
+          "https://api.themoviedb.org/3/movie/popular?api_key=9bfd5921e6063dc55afb80e348605b70&language=en-US&page=1"
         );
         const data = await response.json();
         detailedDesc(data.results);
@@ -18,9 +18,7 @@ const SingleMovieDetailedPage = () => {
     fetchPopularMovies();
   }, []);
 
-  return <div>
-
-  </div>;
+  return <div>{singleMovie}</div>;
 };
 
 export default SingleMovieDetailedPage;
