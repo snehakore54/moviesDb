@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Popular from "./Components/Popular/index";
 import Toprated from "./Components/Toprated/index";
 import Upcoming from "./Components/Upcoming/index";
-import SingleMovieDetailedPage from "./Components/SingleMovieDetails/index";
+
 
 const pages = {
   POPULAR: "Popular",
@@ -92,7 +92,6 @@ function App() {
       {page === pages.POPULAR && <Popular movies={popularMovies} />}
       {page === pages.TOPRATED && <Toprated movies={popularMovies} />}
       {page === pages.UPCOMING && <Upcoming />}
-      <SingleMovieDetailedPage />
     </div>
   );
 }
